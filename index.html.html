@@ -1,0 +1,1927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soil in Forensic Science — 100 MCQs & Practice Set</title>
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --primary-light: #eff6ff;
+            --secondary: #0d9488;
+            --accent: #d97706;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --success-bg: #f0fdf4;
+            --success-border: #bbf7d0;
+            --success-text: #166534;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #0d9488 100%);
+            color: white;
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0 0 0.5rem 0;
+            font-size: 2rem;
+            font-weight: 800;
+        }
+
+        header p {
+            margin: 0;
+            opacity: 0.9;
+            font-size: 1rem;
+        }
+
+        .controls {
+            position: sticky;
+            top: 0;
+            background: var(--card-bg);
+            padding: 0.75rem 1.5rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .btn {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #1d4ed8;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .section-header {
+            background: var(--primary-light);
+            border-left: 5px solid var(--primary);
+            padding: 0.75rem 1rem;
+            margin: 2rem 0 1rem 0;
+            border-radius: 0 0.375rem 0.375rem 0;
+        }
+
+        .section-header h2 {
+            margin: 0;
+            color: var(--primary);
+            font-size: 1.25rem;
+        }
+
+        .mcq-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+            padding: 1.25rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            cursor: pointer;
+            transition: border-color 0.2s;
+        }
+
+        .mcq-card:hover {
+            border-color: #93c5fd;
+        }
+
+        .question {
+            font-weight: 700;
+            font-size: 1.05rem;
+            margin-bottom: 0.75rem;
+            color: var(--text);
+        }
+
+        .options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .option {
+            background: var(--bg);
+            padding: 0.5rem 0.75rem;
+            border-radius: 0.25rem;
+            font-size: 0.95rem;
+            border: 1px solid var(--border);
+        }
+
+        .answer-container {
+            display: none;
+            margin-top: 1rem;
+            padding: 0.75rem 1rem;
+            background-color: var(--success-bg);
+            border: 1px solid var(--success-border);
+            border-radius: 0.375rem;
+            color: var(--success-text);
+        }
+
+        .mcq-card.active .answer-container {
+            display: block;
+        }
+
+        .answer-title {
+            font-weight: 800;
+            margin-bottom: 0.25rem;
+        }
+
+        .solution {
+            font-size: 0.95rem;
+            color: #14532d;
+        }
+
+        .tap-hint {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-align: right;
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+
+        /* Summary & Tables */
+        .summary-box {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .facts-list {
+            padding-left: 1.25rem;
+        }
+
+        .facts-list li {
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            font-size: 0.95rem;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 0.75rem;
+            border: 1px solid var(--border);
+        }
+
+        th {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--bg);
+        }
+
+        .warning-box {
+            background-color: #fffbe6;
+            border: 1px solid #ffe58f;
+            border-left: 5px solid #faad14;
+            padding: 1rem;
+            border-radius: 0.375rem;
+            margin-top: 1.5rem;
+            color: #d48806;
+            font-weight: 600;
+        }
+
+        /* Print Settings */
+        @media print {
+            .controls, .tap-hint {
+                display: none !important;
+            }
+            .mcq-card {
+                break-inside: avoid;
+                border: 1px solid #ccc;
+                box-shadow: none;
+                margin-bottom: 1rem;
+            }
+            .answer-container {
+                display: block !important;
+                background-color: #f9f9f9;
+                border-color: #ddd;
+                color: #000;
+            }
+            body {
+                background: white;
+            }
+            .container {
+                max-width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Soil in Forensic Science</h1>
+    <p>100 Competitive Exam MCQs & PYQ-Style Practice Module</p>
+</header>
+
+<div class="controls">
+    <span style="font-weight: 600; font-size: 0.9rem; color: var(--text-muted);">Tap any question to reveal/hide the answer</span>
+    <button class="btn" id="toggle-all-btn" onclick="toggleAll()">Show All Answers</button>
+</div>
+
+<div class="container">
+
+    <!-- SECTION A -->
+    <div class="section-header">
+        <h2>Section A — Fundamentals of Soil & Forensic Significance</h2>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">1. Soil is considered in forensic science primarily as:</div>
+        <div class="options">
+            <div class="option">A. Biological evidence</div>
+            <div class="option">B. Trace/transfer evidence</div>
+            <div class="option">C. Digital evidence</div>
+            <div class="option">D. Testimonial evidence</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: B — Trace/transfer evidence</div>
+            <div class="solution"><strong>Solution:</strong> Soil is a classic form of trace evidence because small quantities can be transferred between people, objects and locations. Soil may adhere to shoes, clothing, tyres, tools, bodies and other objects. Its physical, chemical, mineralogical and biological characteristics can then be compared with questioned and known samples.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">2. The forensic value of soil primarily arises from:</div>
+        <div class="options">
+            <div class="option">A. Its uniformity</div>
+            <div class="option">B. Its location-dependent variation</div>
+            <div class="option">C. Its inability to transfer</div>
+            <div class="option">D. Its purely organic composition</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: B — Its location-dependent variation</div>
+            <div class="solution"><strong>Solution:</strong> Soil differs geographically because of differences in parent material, climate, vegetation, topography, drainage, organisms and time. This spatial variation gives soil discriminatory value.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">3. Which of the following is NOT a major component considered in forensic soil examination?</div>
+        <div class="options">
+            <div class="option">A. Mineralogical</div>
+            <div class="option">B. Biological</div>
+            <div class="option">C. Chemical</div>
+            <div class="option">D. Astronomical</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: D — Astronomical</div>
+            <div class="solution"><strong>Solution:</strong> Forensic soil examination may consider physical, chemical, mineralogical and biological properties. Astronomical characteristics are not a routine component.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">4. Soil transferred from a crime scene to the footwear of a suspect illustrates:</div>
+        <div class="options">
+            <div class="option">A. Locard's exchange principle</div>
+            <div class="option">B. Principle of individuality</div>
+            <div class="option">C. Principle of superposition</div>
+            <div class="option">D. Principle of progression</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A — Locard's exchange principle</div>
+            <div class="solution"><strong>Solution:</strong> Locard's principle states, in essence, that when two objects come into contact, there is an exchange of material. Soil adhering to shoes is a classic example of transfer evidence.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">5. Which item is most likely to carry soil trace evidence?</div>
+        <div class="options">
+            <div class="option">A. Shoes</div>
+            <div class="option">B. Tyres</div>
+            <div class="option">C. Clothing</div>
+            <div class="option">D. All of the above</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: D — All of the above</div>
+            <div class="solution"><strong>Solution:</strong> Soil may adhere to footwear, tyres, clothing, tools, vehicles and other objects.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">6. The branch of science most directly concerned with soil formation, classification and morphology is:</div>
+        <div class="options">
+            <div class="option">A. Pedology</div>
+            <div class="option">B. Entomology</div>
+            <div class="option">C. Serology</div>
+            <div class="option">D. Toxicology</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A — Pedology</div>
+            <div class="solution"><strong>Solution:</strong> Pedology studies soil as a natural body, including its formation, morphology, classification and distribution. Forensic soil science applies such knowledge to forensic questions.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">7. Forensic soil science is closely related to:</div>
+        <div class="options">
+            <div class="option">A. Geology and pedology</div>
+            <div class="option">B. Astronomy only</div>
+            <div class="option">C. Pharmacology only</div>
+            <div class="option">D. Linguistics</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A — Geology and pedology</div>
+            <div class="solution"><strong>Solution:</strong> Forensic soil investigations integrate soil science, geology, mineralogy, chemistry, biology and spatial information.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">8. Which characteristic is particularly useful for preliminary screening of soil?</div>
+        <div class="options">
+            <div class="option">A. Colour</div>
+            <div class="option">B. DNA sequence only</div>
+            <div class="option">C. Blood group</div>
+            <div class="option">D. Fingerprint pattern</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A — Colour</div>
+            <div class="solution"><strong>Solution:</strong> Soil colour can reflect differences in mineralogy, organic matter, drainage and soil-forming processes. Systematic colour observation is useful as a screening/comparison characteristic, although colour alone is rarely sufficient for definitive discrimination.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">9. Soil colour is commonly influenced by:</div>
+        <div class="options">
+            <div class="option">A. Organic matter</div>
+            <div class="option">B. Iron minerals</div>
+            <div class="option">C. Drainage conditions</div>
+            <div class="option">D. All of the above</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: D — All of the above</div>
+            <div class="solution"><strong>Solution:</strong> Organic matter can darken soil, while iron minerals and their oxidation states can contribute red, yellow or brown colours. Drainage and redox conditions also influence colour.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">10. The most appropriate forensic conclusion after two soil samples show similar characteristics is generally:</div>
+        <div class="options">
+            <div class="option">A. They definitely originated from exactly the same spot</div>
+            <div class="option">B. They may have a common origin</div>
+            <div class="option">C. The suspect is automatically guilty</div>
+            <div class="option">D. The soil is individual evidence</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: B — They may have a common origin</div>
+            <div class="solution"><strong>Solution:</strong> Soil comparison normally establishes whether samples could share a common origin. It does not automatically establish that they came from the exact same point or prove guilt. FBI guidance describes soil examination in terms of comparing colour, texture and composition to assess common origin.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <!-- SECTION B -->
+    <div class="section-header">
+        <h2>Section B — Soil Composition, Texture & Physical Properties</h2>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">11. The three principal particle-size classes of mineral soil are:</div>
+        <div class="options">
+            <div class="option">A. Sand, silt and clay</div>
+            <div class="option">B. Gravel, humus and peat</div>
+            <div class="option">C. Sand, gravel and humus</div>
+            <div class="option">D. Clay, peat and gravel</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A — Sand, silt and clay</div>
+            <div class="solution"><strong>Solution:</strong> Soil texture is principally described by the relative proportions of sand, silt and clay.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">12. Which soil particle is generally the smallest?</div>
+        <div class="options">
+            <div class="option">A. Sand</div>
+            <div class="option">B. Silt</div>
+            <div class="option">C. Clay</div>
+            <div class="option">D. Gravel</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: C — Clay</div>
+            <div class="solution"><strong>Solution:</strong> Clay particles are smaller than silt and sand. Their very small size produces high surface area and distinctive physicochemical properties.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">13. Which soil fraction generally has the largest mineral particles among the three major fractions?</div>
+        <div class="options">
+            <div class="option">A. Clay</div>
+            <div class="option">B. Silt</div>
+            <div class="option">C. Sand</div>
+            <div class="option">D. Colloid</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: C — Sand</div>
+            <div class="solution"><strong>Solution:</strong> In the conventional soil-texture classification, sand > silt > clay in particle size.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">14. Particle-size distribution is useful in forensic soil comparison because:</div>
+        <div class="options">
+            <div class="option">A. Different soils can have different proportions of particle sizes</div>
+            <div class="option">B. All soils have identical particle sizes</div>
+            <div class="option">C. It measures DNA</div>
+            <div class="option">D. It determines blood group</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> Particle-size distribution provides a physical characteristic that can help discriminate soils from different locations. It is one of the recognised forensic screening/comparison methods.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">15. Soil texture refers mainly to:</div>
+        <div class="options">
+            <div class="option">A. Soil colour</div>
+            <div class="option">B. Relative proportions of sand, silt and clay</div>
+            <div class="option">C. Soil temperature</div>
+            <div class="option">D. Soil age only</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: B</div>
+            <div class="solution"><strong>Solution:</strong> Texture = relative proportion of sand, silt and clay. Do not confuse texture with structure, which refers to how particles are arranged into aggregates.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">16. Soil structure refers to:</div>
+        <div class="options">
+            <div class="option">A. Relative proportions of sand, silt and clay</div>
+            <div class="option">B. Arrangement of soil particles into aggregates</div>
+            <div class="option">C. Soil pH only</div>
+            <div class="option">D. Soil colour only</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: B</div>
+            <div class="solution"><strong>Solution:</strong> Soil structure describes the arrangement of individual particles into aggregates or peds.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">17. Which component generally contributes significantly to the dark colour of many soils?</div>
+        <div class="options">
+            <div class="option">A. Organic matter</div>
+            <div class="option">B. Quartz only</div>
+            <div class="option">C. Feldspar only</div>
+            <div class="option">D. Sodium chloride</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A — Organic matter</div>
+            <div class="solution"><strong>Solution:</strong> Humified organic matter commonly produces dark brown to black soil colours.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">18. Humus is primarily:</div>
+        <div class="options">
+            <div class="option">A. Pure quartz</div>
+            <div class="option">B. Stable decomposed organic matter</div>
+            <div class="option">C. Pure clay mineral</div>
+            <div class="option">D. Sodium chloride</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: B</div>
+            <div class="solution"><strong>Solution:</strong> Humus is the relatively stable fraction of decomposed organic material in soil.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">19. Which mineral is extremely common in many soils and sediments?</div>
+        <div class="options">
+            <div class="option">A. Quartz</div>
+            <div class="option">B. Diamond</div>
+            <div class="option">C. Platinum</div>
+            <div class="option">D. Gold</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A — Quartz</div>
+            <div class="solution"><strong>Solution:</strong> Quartz (SiO₂) is abundant in many geological materials and therefore is frequently encountered during forensic mineralogical examination.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">20. The major purpose of examining mineral composition in forensic soil analysis is to:</div>
+        <div class="options">
+            <div class="option">A. Determine blood type</div>
+            <div class="option">B. Increase discriminatory power between soils</div>
+            <div class="option">C. Determine handwriting</div>
+            <div class="option">D. Identify fingerprints</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: B</div>
+            <div class="solution"><strong>Solution:</strong> Mineral composition can differ geographically. Mineralogical examination is considered an important component of forensic soil identification.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <!-- SECTION C -->
+    <div class="section-header">
+        <h2>Section C — Collection and Preservation</h2>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">21. Soil samples should ideally be collected:</div>
+        <div class="options">
+            <div class="option">A. As soon as possible</div>
+            <div class="option">B. After several months</div>
+            <div class="option">C. Only after rain</div>
+            <div class="option">D. Only after decomposition</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A — As soon as possible</div>
+            <div class="solution"><strong>Solution:</strong> Soil at a crime scene may change because of weather, human activity and environmental processes. FBI guidance specifically recommends collecting soil samples as soon as possible.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">22. Which is the best approach when collecting known soil samples?</div>
+        <div class="options">
+            <div class="option">A. Collect only one sample from anywhere</div>
+            <div class="option">B. Collect representative samples from relevant locations</div>
+            <div class="option">C. Collect only surface dust</div>
+            <div class="option">D. Collect only visually different soil</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: B</div>
+            <div class="solution"><strong>Solution:</strong> Representative sampling is essential because soil can vary laterally and vertically, sometimes over short distances. Relevant crime-scene areas, access/escape routes and comparison locations should be considered.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">23. Soil should be collected from different depths when:</div>
+        <div class="options">
+            <div class="option">A. Depth may be relevant to the questioned soil</div>
+            <div class="option">B. Only colour is being examined</div>
+            <div class="option">C. The suspect denies the crime</div>
+            <div class="option">D. There is no reason to sample</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> Soil characteristics can vary with depth. Therefore, if questioned material may have originated below the surface, reference samples should reflect the relevant depth.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">24. Which locations may be important for collecting comparison soil?</div>
+        <div class="options">
+            <div class="option">A. Crime scene</div>
+            <div class="option">B. Access/escape routes</div>
+            <div class="option">C. Suspect's relevant alibi/work/yard areas</div>
+            <div class="option">D. All of the above</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: D</div>
+            <div class="solution"><strong>Solution:</strong> A good sampling strategy considers the crime scene and potential alternative or comparison locations. FBI guidance specifically mentions the immediate crime scene, access/escape routes and, where possible, alibi areas.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">25. When soil is adhering to a suspect's shoe, the preferred procedure is generally:</div>
+        <div class="options">
+            <div class="option">A. Remove all soil immediately</div>
+            <div class="option">B. Preserve the adhering material and submit the item appropriately</div>
+            <div class="option">C. Wash the shoe</div>
+            <div class="option">D. Brush the soil onto the ground</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: B</div>
+            <div class="solution"><strong>Solution:</strong> The adhering soil is the questioned trace evidence. Removing it destroys or alters the evidential relationship. FBI guidance specifically states not to remove soil adhering to shoes, clothing and tools.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">26. Soil-contaminated clothing should generally be:</div>
+        <div class="options">
+            <div class="option">A. Washed before packaging</div>
+            <div class="option">B. Air-dried when necessary and packaged separately</div>
+            <div class="option">C. Mixed with other clothing</div>
+            <div class="option">D. Placed in water</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: B</div>
+            <div class="solution"><strong>Solution:</strong> Drying helps prevent unwanted alteration, microbial activity and moisture-related problems. FBI guidance recommends air-drying soil-contaminated clothing and packaging separately.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">27. A map showing the locations of collected soil samples is useful because it:</div>
+        <div class="options">
+            <div class="option">A. Documents spatial sampling</div>
+            <div class="option">B. Determines blood group</div>
+            <div class="option">C. Replaces laboratory examination</div>
+            <div class="option">D. Identifies fingerprints</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> Spatial information is extremely important in forensic soil interpretation. A sampling map helps the examiner understand where each known sample originated. FBI guidance recommends submitting a map identifying soil-sample locations.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">28. Why should questioned and known soil samples be clearly distinguished?</div>
+        <div class="options">
+            <div class="option">A. To prevent cross-contamination and identification errors</div>
+            <div class="option">B. To increase soil pH</div>
+            <div class="option">C. To alter colour</div>
+            <div class="option">D. To remove minerals</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> Proper labelling and separation preserve chain of custody and prevent accidental mixing. Forensic laboratory guidance also stresses distinguishing questioned and control soil/dust samples.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">29. The ideal known soil sample should be:</div>
+        <div class="options">
+            <div class="option">A. Representative of the relevant location</div>
+            <div class="option">B. From an unrelated location</div>
+            <div class="option">C. Artificially manufactured</div>
+            <div class="option">D. Collected only from a different depth</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> The known sample should represent the potential source being tested against the questioned material.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">30. The most important reason for collecting multiple known soil samples is:</div>
+        <div class="options">
+            <div class="option">A. Soil is always homogeneous</div>
+            <div class="option">B. Soil can vary spatially</div>
+            <div class="option">C. To increase sample weight only</div>
+            <div class="option">D. To avoid laboratory testing</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: B</div>
+            <div class="solution"><strong>Solution:</strong> Soil can vary over short distances and with depth. Multiple samples help characterise this variability and reduce the risk of an unrepresentative comparison.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <!-- SECTION D -->
+    <div class="section-header">
+        <h2>Section D — Examination Sequence & Screening</h2>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">31. PYQ — UGC-NET pattern: Which is the correct sequence for forensic soil examination?</div>
+        <div class="options">
+            <div class="option">A. Visual examination → sample preparation → particle size → pH → instrumental analysis</div>
+            <div class="option">B. Sample preparation → visual examination → particle size → pH → instrumental analysis</div>
+            <div class="option">C. Particle size → pH → instrument → sample preparation</div>
+            <div class="option">D. pH → instrument → colour → particle size</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: B</div>
+            <div class="solution"><strong>Solution:</strong> A 2024 UGC-NET Forensic Science question asked this sequence and gave B: Sample preparation → visual examination → particle-size distribution → pH examination → instrumental analysis as the answer.<br><em>Exam tip:</em> Remember: Preparation → Colour → Particle size → pH → Instrumentation.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">32. The purpose of preliminary screening is to:</div>
+        <div class="options">
+            <div class="option">A. Quickly characterise samples and identify useful differences</div>
+            <div class="option">B. Immediately individualise a suspect</div>
+            <div class="option">C. Determine guilt</div>
+            <div class="option">D. Replace all instrumental analysis</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> Screening methods are relatively rapid and help decide which detailed examinations are appropriate. A systematic forensic approach may progress from rapid characterisation to detailed mineralogical/chemical examination.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">33. Which should generally precede sophisticated instrumental analysis?</div>
+        <div class="options">
+            <div class="option">A. Preliminary examination</div>
+            <div class="option">B. Destruction of sample</div>
+            <div class="option">C. Washing</div>
+            <div class="option">D. Random mixing</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> Basic observations such as colour, texture and particle-size characteristics can guide later examination.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">34. Which of the following is a physical screening characteristic?</div>
+        <div class="options">
+            <div class="option">A. Colour</div>
+            <div class="option">B. Texture</div>
+            <div class="option">C. Particle-size distribution</div>
+            <div class="option">D. All of the above</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: D</div>
+            <div class="solution"><strong>Solution:</strong> These are common physical characteristics used in soil examination.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">35. The term “questioned soil” refers to:</div>
+        <div class="options">
+            <div class="option">A. Soil whose source/origin is under investigation</div>
+            <div class="option">B. Soil known to come from the crime scene</div>
+            <div class="option">C. Laboratory reagent</div>
+            <div class="option">D. Artificial soil</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> Questioned material is the evidence whose origin or relationship to a known sample is being evaluated.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">36. “Known soil” or “control soil” means:</div>
+        <div class="options">
+            <div class="option">A. A reference sample collected from a known location</div>
+            <div class="option">B. Soil of unknown origin</div>
+            <div class="option">C. Artificial soil</div>
+            <div class="option">D. Contaminated soil only</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> Known/reference soil provides the comparison basis for the questioned material.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">37. Soil comparison is best described as:</div>
+        <div class="options">
+            <div class="option">A. Comparison of multiple characteristics</div>
+            <div class="option">B. Reliance on colour alone</div>
+            <div class="option">C. Reliance on pH alone</div>
+            <div class="option">D. Reliance on one mineral only</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> Because soil is complex, combining independent characteristics generally provides greater discriminatory power than relying on one characteristic.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">38. A difference in soil colour between questioned and known samples is generally:</div>
+        <div class="options">
+            <div class="option">A. Potentially significant</div>
+            <div class="option">B. Always irrelevant</div>
+            <div class="option">C. Proof of guilt</div>
+            <div class="option">D. Proof of innocence</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> A significant unexplained difference can support exclusion of a proposed source, depending on sampling and analytical context. Soil comparisons are fundamentally comparative.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">39. Which factor can complicate soil comparison?</div>
+        <div class="options">
+            <div class="option">A. Weathering</div>
+            <div class="option">B. Environmental alteration</div>
+            <div class="option">C. Contamination</div>
+            <div class="option">D. All of the above</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: D</div>
+            <div class="solution"><strong>Solution:</strong> Soil is dynamic. Weather, contamination, biological activity and human disturbance can modify its characteristics.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">40. Soil evidence is strongest when:</div>
+        <div class="options">
+            <div class="option">A. Multiple independent characteristics support the comparison</div>
+            <div class="option">B. Only colour matches</div>
+            <div class="option">C. Only the suspect owns shoes</div>
+            <div class="option">D. No control samples exist</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> Combining morphology, mineralogy, chemistry, particle size and other suitable characteristics can increase discriminatory power.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <!-- SECTION E -->
+    <div class="section-header">
+        <h2>Section E — Density Gradient & Microscopy</h2>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">41. Density-gradient methods in soil analysis are used primarily to compare:</div>
+        <div class="options">
+            <div class="option">A. Density characteristics of soil particles</div>
+            <div class="option">B. Blood groups</div>
+            <div class="option">C. DNA sequences</div>
+            <div class="option">D. Fingerprints</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> Density-gradient techniques can separate or characterise soil particles according to density and help compare soil populations.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">42. A density-gradient tube generally contains:</div>
+        <div class="options">
+            <div class="option">A. A medium with a controlled density gradient</div>
+            <div class="option">B. Pure distilled water only</div>
+            <div class="option">C. Blood serum only</div>
+            <div class="option">D. DNA ladder</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> A density-gradient medium allows particles with different densities to occupy characteristic positions or bands.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">43. Microscopy of soil can reveal:</div>
+        <div class="options">
+            <div class="option">A. Mineral grains</div>
+            <div class="option">B. Plant fragments</div>
+            <div class="option">C. Biological material</div>
+            <div class="option">D. All of the above</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: D</div>
+            <div class="solution"><strong>Solution:</strong> Microscopic examination may reveal mineral particles, plant fragments, pollen/spores and other components.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">44. Polarized light microscopy is particularly useful for:</div>
+        <div class="options">
+            <div class="option">A. Mineral identification/characterisation</div>
+            <div class="option">B. Blood typing</div>
+            <div class="option">C. DNA amplification</div>
+            <div class="option">D. Toxicology screening</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> Many minerals exhibit characteristic optical properties under polarized light, making microscopy valuable in petrographic/mineralogical examination.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">45. The refractive index of a mineral is:</div>
+        <div class="options">
+            <div class="option">A. A useful optical property</div>
+            <div class="option">B. Its soil pH</div>
+            <div class="option">C. Its density only</div>
+            <div class="option">D. Its organic carbon content</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> Refractive index is an optical property useful for mineral identification, particularly in microscopic analysis.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">46. Birefringence is especially relevant to:</div>
+        <div class="options">
+            <div class="option">A. Optical mineral identification</div>
+            <div class="option">B. Blood grouping</div>
+            <div class="option">C. Fingerprint development</div>
+            <div class="option">D. DNA profiling</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> Birefringence is a characteristic optical property of anisotropic minerals and can help distinguish mineral species under polarized light.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">47. Which mineral property can be useful during microscopic identification?</div>
+        <div class="options">
+            <div class="option">A. Colour</div>
+            <div class="option">B. Cleavage</div>
+            <div class="option">C. Refractive behaviour</div>
+            <div class="option">D. All of the above</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: D</div>
+            <div class="solution"><strong>Solution:</strong> Mineral identification may use colour, crystal habit, cleavage, relief, refractive index, birefringence and other optical characteristics.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">48. Mineralogical examination is important in forensic soil identification because:</div>
+        <div class="options">
+            <div class="option">A. Minerals are important constituents of soils</div>
+            <div class="option">B. Minerals occur only in laboratories</div>
+            <div class="option">C. Minerals have no geographical variation</div>
+            <div class="option">D. Minerals are biological evidence</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> Mineral composition is one of the major characteristics used to distinguish soil samples.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">49. Plant fragments in soil evidence can provide:</div>
+        <div class="options">
+            <div class="option">A. Additional contextual information</div>
+            <div class="option">B. Blood-group information</div>
+            <div class="option">C. Fingerprint information</div>
+            <div class="option">D. DNA of every suspect automatically</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> Biological components such as plant fragments, pollen and spores may contribute additional discriminatory information.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">50. Which combination is most appropriate for forensic soil microscopy?</div>
+        <div class="options">
+            <div class="option">A. Mineral grains + organic/biological particles</div>
+            <div class="option">B. Only fingerprints</div>
+            <div class="option">C. Only blood cells</div>
+            <div class="option">D. Only DNA</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> Soil is a complex mixture, and microscopy can provide information about both mineral and biological components.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <!-- SECTION F -->
+    <div class="section-header">
+        <h2>Section F — Instrumental Analysis</h2>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">51. XRD stands for:</div>
+        <div class="options">
+            <div class="option">A. X-ray diffraction</div>
+            <div class="option">B. X-ray density</div>
+            <div class="option">C. Xenon radiation detection</div>
+            <div class="option">D. X-ray DNA</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> X-ray diffraction (XRD) is an important method for identifying crystalline mineral phases.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">52. XRD is particularly valuable for forensic soil analysis because it can determine:</div>
+        <div class="options">
+            <div class="option">A. Mineralogical composition</div>
+            <div class="option">B. Blood group</div>
+            <div class="option">C. Fingerprint pattern</div>
+            <div class="option">D. DNA sequence</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> XRD identifies crystalline minerals based on their diffraction patterns. Clay mineral identification by XRD can be especially useful in soil forensics.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">53. Which technique is especially useful for identifying clay minerals?</div>
+        <div class="options">
+            <div class="option">A. XRD</div>
+            <div class="option">B. Polygraph</div>
+            <div class="option">C. ECG</div>
+            <div class="option">D. TLC</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A — XRD</div>
+            <div class="solution"><strong>Solution:</strong> Clay mineralogical identification by X-ray diffraction can provide information useful for determining soil origin.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">54. SEM-EDX combines:</div>
+        <div class="options">
+            <div class="option">A. Scanning electron microscopy and energy-dispersive X-ray analysis</div>
+            <div class="option">B. Soil microscopy and DNA extraction</div>
+            <div class="option">C. Spectrophotometry and chromatography</div>
+            <div class="option">D. Electrophoresis and microscopy</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> SEM provides high-resolution morphological imaging, while EDX/EDS provides elemental information.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">55. SEM is particularly useful for:</div>
+        <div class="options">
+            <div class="option">A. High-resolution surface morphology</div>
+            <div class="option">B. Blood grouping</div>
+            <div class="option">C. DNA sequencing</div>
+            <div class="option">D. Voice identification</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> Scanning electron microscopy provides detailed morphology of particles and surfaces.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">56. EDX primarily provides information about:</div>
+        <div class="options">
+            <div class="option">A. Elemental composition</div>
+            <div class="option">B. DNA sequence</div>
+            <div class="option">C. Soil colour only</div>
+            <div class="option">D. Particle age</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> Energy-dispersive X-ray analysis detects characteristic X-rays emitted by elements under electron bombardment, providing elemental composition information.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">57. FTIR stands for:</div>
+        <div class="options">
+            <div class="option">A. Fourier-transform infrared spectroscopy</div>
+            <div class="option">B. Fast thermal isotope reaction</div>
+            <div class="option">C. Forensic trace identification reaction</div>
+            <div class="option">D. Fourier total ion radiation</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> FTIR is a spectroscopic method that provides information about molecular vibrations and chemical composition.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">58. ATR-FTIR is useful in soil analysis mainly for:</div>
+        <div class="options">
+            <div class="option">A. Chemical/molecular characterisation</div>
+            <div class="option">B. Fingerprint development</div>
+            <div class="option">C. Blood grouping</div>
+            <div class="option">D. DNA amplification</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> ATR-FTIR can provide chemical information about soil components and is among the methods reported for forensic soil discrimination.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">59. ICP-MS is especially useful for:</div>
+        <div class="options">
+            <div class="option">A. Trace-element analysis</div>
+            <div class="option">B. Fingerprint ridge analysis</div>
+            <div class="option">C. Blood pressure measurement</div>
+            <div class="option">D. Colour matching only</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> Inductively coupled plasma mass spectrometry (ICP-MS) is highly sensitive for elemental and trace-element analysis and can help discriminate soils.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">60. ICP-OES is primarily an:</div>
+        <div class="options">
+            <div class="option">A. Elemental analytical technique</div>
+            <div class="option">B. Microscopic imaging technique</div>
+            <div class="option">C. DNA profiling technique</div>
+            <div class="option">D. Fingerprint technique</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> ICP-OES uses optical emission from elements excited in an inductively coupled plasma to determine elemental composition.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">61. Which technique provides elemental information?</div>
+        <div class="options">
+            <div class="option">A. SEM-EDX</div>
+            <div class="option">B. ICP-MS</div>
+            <div class="option">C. ICP-OES</div>
+            <div class="option">D. All of the above</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: D</div>
+            <div class="solution"><strong>Solution:</strong> All three can contribute elemental information, though their operating principles and sensitivities differ.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">62. Which technique is most directly associated with crystalline mineral identification?</div>
+        <div class="options">
+            <div class="option">A. XRD</div>
+            <div class="option">B. PCR</div>
+            <div class="option">C. GC-MS</div>
+            <div class="option">D. TLC</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> XRD is fundamentally a crystallographic/mineralogical method.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">63. Py-GC-MS may be useful for investigating:</div>
+        <div class="options">
+            <div class="option">A. Organic components of soil</div>
+            <div class="option">B. Fingerprint minutiae</div>
+            <div class="option">C. Bone fractures</div>
+            <div class="option">D. Blood cells</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> Pyrolysis-GC-MS can characterise organic materials by pyrolysing complex substances and analysing volatile products. It has been discussed as a forensic soil-analysis technique.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">64. Which technique is NOT primarily a soil mineralogical method?</div>
+        <div class="options">
+            <div class="option">A. XRD</div>
+            <div class="option">B. Polarized light microscopy</div>
+            <div class="option">C. SEM-EDX</div>
+            <div class="option">D. ABO blood grouping</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: D</div>
+            <div class="solution"><strong>Solution:</strong> ABO blood grouping is a serological method, not a soil-mineralogical method.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">65. Which analytical combination can provide both morphology and elemental information?</div>
+        <div class="options">
+            <div class="option">A. SEM-EDX</div>
+            <div class="option">B. TLC</div>
+            <div class="option">C. ECG</div>
+            <div class="option">D. Polygraph</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> SEM gives morphology and EDX provides elemental composition.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <!-- SECTION G -->
+    <div class="section-header">
+        <h2>Section G — Chemical Characteristics</h2>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">66. Soil pH measures:</div>
+        <div class="options">
+            <div class="option">A. Acidity/alkalinity</div>
+            <div class="option">B. Particle size</div>
+            <div class="option">C. Mineral density</div>
+            <div class="option">D. Soil colour</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> pH indicates the hydrogen-ion activity/acidity-alkalinity status of the soil.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">67. Soil pH can be useful in forensic comparison because:</div>
+        <div class="options">
+            <div class="option">A. Different soils can possess different pH values</div>
+            <div class="option">B. All soils have exactly the same pH</div>
+            <div class="option">C. pH identifies fingerprints</div>
+            <div class="option">D. pH gives a DNA profile</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> pH is one chemical characteristic that can contribute to a multidimensional soil comparison.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">68. Loss on ignition (LOI) can be used to estimate:</div>
+        <div class="options">
+            <div class="option">A. Certain volatile/organic components</div>
+            <div class="option">B. Fingerprint ridge characteristics</div>
+            <div class="option">C. Blood group</div>
+            <div class="option">D. Mineral crystal symmetry only</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> Loss on ignition involves heating a sample and measuring mass loss, which can provide information related to organic matter and other volatile components depending on the protocol. LOI is among methods reported in forensic soil studies.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">69. Organic matter in soil may be useful for forensic discrimination because:</div>
+        <div class="options">
+            <div class="option">A. Its amount and nature can vary between locations</div>
+            <div class="option">B. It is identical everywhere</div>
+            <div class="option">C. It is never transferred</div>
+            <div class="option">D. It is unrelated to soil characteristics</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> Organic matter contributes to soil composition and can vary according to vegetation, climate, land use and decomposition.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">70. Which is a chemical characteristic of soil?</div>
+        <div class="options">
+            <div class="option">A. pH</div>
+            <div class="option">B. Mineral grain shape only</div>
+            <div class="option">C. Particle size only</div>
+            <div class="option">D. Colour only</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> pH is a chemical characteristic; particle size is physical and mineralogy is mineralogical.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">71. Elemental profiling can be useful because:</div>
+        <div class="options">
+            <div class="option">A. Elemental concentrations may vary among geographical locations</div>
+            <div class="option">B. Every soil has identical elemental composition</div>
+            <div class="option">C. Elements are not present in soil</div>
+            <div class="option">D. It identifies fingerprints directly</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> Elemental profiles can provide geographical discrimination. Studies have used elemental composition together with statistical classification to distinguish soils from different locations.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">72. Which elements are commonly major constituents considered in elemental soil profiling?</div>
+        <div class="options">
+            <div class="option">A. Si, Al, Fe</div>
+            <div class="option">B. H only</div>
+            <div class="option">C. He only</div>
+            <div class="option">D. Ag only</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> Silicon, aluminium and iron are common major soil/mineral constituents. Elemental profiles can include many elements such as Si, Al, Fe, K, Na, Mg, Ca, Ti and others.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">73. A soil with high organic content is often:</div>
+        <div class="options">
+            <div class="option">A. Darker in colour</div>
+            <div class="option">B. Always white</div>
+            <div class="option">C. Always red</div>
+            <div class="option">D. Always blue</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> High organic matter frequently contributes to dark brown or black colour, though colour is influenced by multiple factors.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">74. Soil chemistry should generally be interpreted:</div>
+        <div class="options">
+            <div class="option">A. In combination with other characteristics</div>
+            <div class="option">B. Completely independently</div>
+            <div class="option">C. As proof of guilt</div>
+            <div class="option">D. Without control samples</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> A single chemical parameter rarely provides sufficient discrimination. Multidimensional comparison is more informative.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">75. Which is an example of an instrumental method used in forensic soil analysis?</div>
+        <div class="options">
+            <div class="option">A. XRD</div>
+            <div class="option">B. SEM-EDX</div>
+            <div class="option">C. ICP-MS</div>
+            <div class="option">D. All of the above</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: D</div>
+            <div class="solution"><strong>Solution:</strong> All are recognised analytical approaches for soil characterisation/discrimination.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <!-- SECTION H -->
+    <div class="section-header">
+        <h2>Section H — Mineralogy</h2>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">76. Quartz has the chemical formula:</div>
+        <div class="options">
+            <div class="option">A. SiO₂</div>
+            <div class="option">B. CaCO₃</div>
+            <div class="option">C. Fe₂O₃</div>
+            <div class="option">D. NaCl</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A — SiO₂</div>
+            <div class="solution"><strong>Solution:</strong> Quartz is crystalline silicon dioxide.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">77. Calcite is:</div>
+        <div class="options">
+            <div class="option">A. CaCO₃</div>
+            <div class="option">B. SiO₂</div>
+            <div class="option">C. NaCl</div>
+            <div class="option">D. FeS₂</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A — CaCO₃</div>
+            <div class="solution"><strong>Solution:</strong> Calcite is calcium carbonate and may be an important mineral component in some soils.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">78. Kaolinite is a:</div>
+        <div class="options">
+            <div class="option">A. Clay mineral</div>
+            <div class="option">B. Metal alloy</div>
+            <div class="option">C. Biological organism</div>
+            <div class="option">D. Hydrocarbon</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A — Clay mineral</div>
+            <div class="solution"><strong>Solution:</strong> Kaolinite is a common clay mineral. Clay-mineral composition can be useful in forensic soil discrimination.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">79. Montmorillonite belongs to:</div>
+        <div class="options">
+            <div class="option">A. Clay minerals</div>
+            <div class="option">B. Carbonate minerals only</div>
+            <div class="option">C. Sulfides only</div>
+            <div class="option">D. Native metals</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> Montmorillonite is a smectite-group clay mineral.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">80. Which technique has been used to compare the relative amounts of minerals such as montmorillonite, kaolinite and feldspar?</div>
+        <div class="options">
+            <div class="option">A. XRD</div>
+            <div class="option">B. ECG</div>
+            <div class="option">C. Polygraph</div>
+            <div class="option">D. UV fingerprinting</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A — XRD</div>
+            <div class="solution"><strong>Solution:</strong> XRD can identify and quantify crystalline mineral phases. Research has demonstrated its utility for soil discrimination and geographical tracing.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">81. Feldspar is:</div>
+        <div class="options">
+            <div class="option">A. A group of rock-forming minerals</div>
+            <div class="option">B. A biological tissue</div>
+            <div class="option">C. A synthetic polymer</div>
+            <div class="option">D. A blood protein</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> Feldspars are major rock-forming silicate minerals and are common in geological materials.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">82. Clay minerals are particularly useful in soil forensics because:</div>
+        <div class="options">
+            <div class="option">A. They can retain long-lasting characteristics</div>
+            <div class="option">B. They are always identical</div>
+            <div class="option">C. They cannot be analysed</div>
+            <div class="option">D. They occur only in laboratories</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> Clay mineralogical characteristics can be persistent and geographically informative; XRD has been specifically investigated for forensic clay analysis.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">83. Mineralogical analysis is best described as:</div>
+        <div class="options">
+            <div class="option">A. Identification and characterisation of minerals present in soil</div>
+            <div class="option">B. Identification of suspects by fingerprints</div>
+            <div class="option">C. Measurement of blood pressure</div>
+            <div class="option">D. DNA amplification</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> Mineralogical examination identifies the mineral phases and their characteristics, contributing to soil comparison.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">84. A mineral's crystal structure is particularly relevant to:</div>
+        <div class="options">
+            <div class="option">A. X-ray diffraction</div>
+            <div class="option">B. Blood grouping</div>
+            <div class="option">C. DNA electrophoresis</div>
+            <div class="option">D. Voice analysis</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> XRD patterns arise from the ordered atomic arrangement of crystalline materials.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">85. Which statement is correct?</div>
+        <div class="options">
+            <div class="option">A. Soil mineralogy can help constrain geographical origin</div>
+            <div class="option">B. Soil mineralogy has no forensic value</div>
+            <div class="option">C. All soil minerals are identical everywhere</div>
+            <div class="option">D. Minerals cannot be compared</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> Mineralogical composition is influenced by parent material and environmental history, making it useful for geographical discrimination.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <!-- SECTION I -->
+    <div class="section-header">
+        <h2>Section I — Advanced Forensic Soil Comparison</h2>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">86. The strongest soil comparison generally involves:</div>
+        <div class="options">
+            <div class="option">A. Multiple complementary analytical methods</div>
+            <div class="option">B. Only visual colour</div>
+            <div class="option">C. Only soil pH</div>
+            <div class="option">D. Only one mineral</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> Soil is a complex mixture. Combining physical, chemical, mineralogical and biological information can increase discriminatory power.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">87. A questioned soil contains quartz, feldspar and a distinctive clay-mineral profile matching a crime-scene sample. This finding:</div>
+        <div class="options">
+            <div class="option">A. Supports a possible common origin</div>
+            <div class="option">B. Automatically proves guilt</div>
+            <div class="option">C. Has no significance</div>
+            <div class="option">D. Identifies the suspect's DNA</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> Agreement across several characteristics strengthens an association, but forensic conclusions must account for variability, sampling and the prevalence of the observed characteristics.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">88. If questioned soil differs significantly from properly collected known soil in important characteristics, the result may:</div>
+        <div class="options">
+            <div class="option">A. Support exclusion of that proposed source</div>
+            <div class="option">B. Prove the suspect committed the crime</div>
+            <div class="option">C. Prove another suspect committed it</div>
+            <div class="option">D. Have no value</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> A significant unexplained difference can indicate that the questioned material did not originate from the sampled location. This is an exclusion, not identification of the actual alternative source.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">89. “Common origin” in forensic soil examination means:</div>
+        <div class="options">
+            <div class="option">A. The samples are sufficiently similar that a common source cannot be excluded</div>
+            <div class="option">B. They necessarily came from exactly one square metre</div>
+            <div class="option">C. They came from the suspect's property</div>
+            <div class="option">D. The suspect is guilty</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> Forensic comparison should not be confused with absolute individualisation. Similarity is interpreted in the context of the variability and analytical characteristics of the soil.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">90. Which factor is especially important when interpreting a soil comparison?</div>
+        <div class="options">
+            <div class="option">A. Sampling strategy</div>
+            <div class="option">B. Known-source variability</div>
+            <div class="option">C. Potential contamination</div>
+            <div class="option">D. All of the above</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: D</div>
+            <div class="solution"><strong>Solution:</strong> Interpretation depends heavily on how representative the reference samples are, how much natural variation exists and whether contamination or alteration has occurred.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">91. Why is soil often called “transfer evidence”?</div>
+        <div class="options">
+            <div class="option">A. It can move from one object/location to another through contact</div>
+            <div class="option">B. It is transferred electronically</div>
+            <div class="option">C. It is transferred by DNA replication</div>
+            <div class="option">D. It is transferred only by laboratory instruments</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> Soil can adhere to shoes, tyres, clothing, tools and other objects during contact with an environment.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">92. The evidential significance of soil is generally increased by:</div>
+        <div class="options">
+            <div class="option">A. Unusual characteristics that are uncommon in the relevant population of soils</div>
+            <div class="option">B. Common characteristics only</div>
+            <div class="option">C. Ignoring background soils</div>
+            <div class="option">D. Using one sample only</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A</div>
+            <div class="solution"><strong>Solution:</strong> A distinctive combination of characteristics is generally more informative than common characteristics. This is the logic behind combining multiple analytical properties.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">93. Which is a limitation of forensic soil evidence?</div>
+        <div class="options">
+            <div class="option">A. Soil can be heterogeneous</div>
+            <div class="option">B. Soil can change over time</div>
+            <div class="option">C. Similar soils can occur at different locations</div>
+            <div class="option">D. All of the above</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: D</div>
+            <div class="solution"><strong>Solution:</strong> Soil evidence is powerful but not magical. Spatial heterogeneity, environmental alteration and the existence of similar soils at multiple locations must be considered.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">94. A forensic examiner should preferably avoid concluding:</div>
+        <div class="options">
+            <div class="option">A. “The questioned soil is indistinguishable from the submitted known sample within the examined characteristics”</div>
+            <div class="option">B. “The evidence supports a possible common origin”</div>
+            <div class="option">C. “The soil definitely proves the suspect committed the offence”</div>
+            <div class="option">D. “The samples differ in a significant characteristic”</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: C</div>
+            <div class="solution"><strong>Solution:</strong> Laboratory comparison does not itself establish criminal guilt. It provides scientific evidence that must be interpreted in the overall investigative and legal context.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">95. Which statistical approach may be used with elemental soil data?</div>
+        <div class="options">
+            <div class="option">A. Principal Component Analysis</div>
+            <div class="option">B. Hierarchical clustering</div>
+            <div class="option">C. Classification methods</div>
+            <div class="option">D. All of the above</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: D</div>
+            <div class="solution"><strong>Solution:</strong> Multivariate statistics can help identify patterns, reduce dimensionality and classify soils. Research has used PCA, hierarchical clustering and K-nearest-neighbour approaches for soil discrimination.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <!-- SECTION J -->
+    <div class="section-header">
+        <h2>Section J — High-Level PYQ-Style / Exam-Trap Questions</h2>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">96. PYQ — 2024 forensic science paper: Which of the following has been asked as a question concerning soil examination?</div>
+        <div class="options">
+            <div class="option">A. Instrumental analysis of soil</div>
+            <div class="option">B. Structure and composition of soil</div>
+            <div class="option">C. Preparation of soil sample</div>
+            <div class="option">D. All of the above</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: D</div>
+            <div class="solution"><strong>Solution:</strong> A 2024 Parul University forensic-science paper included questions on instrumental analysis for soil examination, structure and composition of soil, and preparation of soil sample. This demonstrates that these areas are repeatedly examined in forensic-science competitive/academic examinations.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">97. PYQ — 2019 forensic science paper: Which method was specifically asked in relation to soil analysis?</div>
+        <div class="options">
+            <div class="option">A. Density-gradient method</div>
+            <div class="option">B. DNA sequencing</div>
+            <div class="option">C. Polygraph examination</div>
+            <div class="option">D. Voice spectrography</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: A — Density-gradient method</div>
+            <div class="solution"><strong>Solution:</strong> A 2019 Parul University forensic-science paper specifically included a short-note question on the density-gradient method to analyse soil samples.<br><em>Exam implication:</em> Density-gradient analysis is a high-yield topic and should not be skipped.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">98. Which pair is correctly matched?</div>
+        <div class="options">
+            <div class="option">A. XRD — mineralogical analysis</div>
+            <div class="option">B. SEM-EDX — morphology and elemental analysis</div>
+            <div class="option">C. FTIR — molecular/chemical characterisation</div>
+            <div class="option">D. All of the above</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: D</div>
+            <div class="solution"><strong>Solution:</strong><br>
+            • XRD → mineralogical/crystalline phase analysis<br>
+            • SEM → morphology<br>
+            • EDX → elemental composition<br>
+            • FTIR → molecular/chemical information<br>
+            These techniques are among the major instrumental approaches reported in forensic soil analysis.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">99. A suspect's shoes contain soil. Which sampling strategy is MOST scientifically appropriate?</div>
+        <div class="options">
+            <div class="option">A. Collect only the suspect's soil</div>
+            <div class="option">B. Collect only one crime-scene soil sample</div>
+            <div class="option">C. Preserve the questioned soil and collect representative known samples from relevant crime-scene locations, including appropriate depth/variation</div>
+            <div class="option">D. Wash the shoes and compare the wash water</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: C</div>
+            <div class="solution"><strong>Solution:</strong> The best comparison requires preservation of the questioned trace and representative known samples. Sampling should consider spatial and depth variation, colour/texture/composition changes and relevant access/escape areas.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <div class="mcq-card" onclick="toggleAnswer(this)">
+        <div class="question">100. Most important integrated question: Which statement BEST describes forensic soil examination?</div>
+        <div class="options">
+            <div class="option">A. Soil can uniquely identify a person in every case</div>
+            <div class="option">B. Soil comparison determines whether questioned and known soils could share a common origin by examining multiple physical, chemical, mineralogical and biological characteristics</div>
+            <div class="option">C. Soil analysis is limited to colour comparison</div>
+            <div class="option">D. Soil is not transferable evidence</div>
+        </div>
+        <div class="answer-container">
+            <div class="answer-title">Answer: B</div>
+            <div class="solution"><strong>Solution:</strong> This is the core concept you should remember for an FSL examination.<br>
+            Soil is a complex, heterogeneous and transferable trace material. Its forensic examination may involve:
+            <ul>
+                <li>colour and morphology,</li>
+                <li>texture,</li>
+                <li>particle-size distribution,</li>
+                <li>density characteristics,</li>
+                <li>mineralogy,</li>
+                <li>pH,</li>
+                <li>organic matter,</li>
+                <li>microscopy,</li>
+                <li>XRD, FTIR/ATR-FTIR, SEM-EDX, ICP-MS/ICP-OES,</li>
+                <li>biological components such as plant material, pollen and spores,</li>
+                <li>and, where appropriate, statistical/multivariate analysis.</li>
+            </ul>
+            The objective is generally to compare questioned soil with known/reference samples and assess whether a common origin is supported or excluded, rather than automatically “identifying” a person.</div>
+        </div>
+        <div class="tap-hint">Tap to toggle answer</div>
+    </div>
+
+    <!-- REVISION & HINTS SECTION -->
+    <div class="summary-box">
+        <h2 style="color: var(--primary); margin-top: 0;">🔥 25 Key Facts You Should Memorise for UPSSSC FSL</h2>
+        <ol class="facts-list">
+            <li>Soil = trace/transfer evidence.</li>
+            <li>Locard's exchange principle explains soil transfer.</li>
+            <li>Soil may transfer to shoes, clothing, tyres and tools.</li>
+            <li>Soil is a complex mixture of physical + chemical + mineralogical + biological components.</li>
+            <li>Pedology = study of soil as a natural body.</li>
+            <li>Texture mainly concerns sand, silt and clay.</li>
+            <li>Clay &lt; silt &lt; sand in particle size.</li>
+            <li>Soil colour is a valuable screening characteristic.</li>
+            <li>Organic matter commonly contributes to dark soil colour.</li>
+            <li>Iron compounds strongly influence red/yellow/brown soil colours.</li>
+            <li>Soil can vary laterally and vertically.</li>
+            <li>Collect samples as soon as possible.</li>
+            <li>Collect from the crime scene + relevant access/escape routes.</li>
+            <li>Consider depth when depth is relevant to questioned soil.</li>
+            <li>Do not remove adhering soil from shoes/clothing/tools before examination.</li>
+            <li>Use representative known/control samples.</li>
+            <li>Density-gradient methods are used in soil comparison.</li>
+            <li>XRD = mineralogical/crystalline phase analysis.</li>
+            <li>SEM = morphology.</li>
+            <li>EDX/EDS = elemental composition.</li>
+            <li>FTIR = molecular/chemical characterisation.</li>
+            <li>ICP-MS/ICP-OES = elemental analysis.</li>
+            <li>Clay minerals such as kaolinite and montmorillonite can be useful for discrimination.</li>
+            <li>Multiple complementary characteristics are generally stronger than one characteristic.</li>
+            <li>The normal forensic conclusion concerns association/common origin or exclusion, not automatic proof of guilt.</li>
+        </ol>
+
+        <h2 style="color: var(--primary); margin-top: 2rem;">⚡ Ultra-Short Revision Table</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Topic</th>
+                    <th>Must Remember</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Nature of evidence</td><td>Trace/transfer</td></tr>
+                <tr><td>Principle</td><td>Locard's exchange</td></tr>
+                <tr><td>Soil science</td><td>Pedology</td></tr>
+                <tr><td>Main texture fractions</td><td>Sand, silt, clay</td></tr>
+                <tr><td>Smallest fraction</td><td>Clay</td></tr>
+                <tr><td>Screening</td><td>Colour, texture, particle size</td></tr>
+                <tr><td>Chemical</td><td>pH, organic matter</td></tr>
+                <tr><td>Mineralogical</td><td>XRD, microscopy</td></tr>
+                <tr><td>Morphology</td><td>SEM</td></tr>
+                <tr><td>Elements</td><td>EDX, ICP-MS, ICP-OES</td></tr>
+                <tr><td>Molecular</td><td>FTIR</td></tr>
+                <tr><td>Density</td><td>Density-gradient method</td></tr>
+                <tr><td>Clay minerals</td><td>Kaolinite, montmorillonite</td></tr>
+                <tr><td>Reference sample</td><td>Known/control soil</td></tr>
+                <tr><td>Collection</td><td>ASAP</td></tr>
+                <tr><td>Sampling</td><td>Representative + relevant depth</td></tr>
+                <tr><td>Adhering soil</td><td>Preserve it; don't remove</td></tr>
+                <tr><td>Interpretation</td><td>Common origin/exclusion</td></tr>
+                <tr><td>Strong comparison</td><td>Multiple characteristics</td></tr>
+                <tr><td>Major limitation</td><td>Soil heterogeneity/variation</td></tr>
+            </tbody>
+        </table>
+
+        <div class="warning-box">
+            ⚠️ One Important Exam Warning: Don't memorise “soil can identify a person.” The scientifically safer formulation is “soil can associate or exclude a person/object/location by comparison of soil characteristics.” That distinction is exactly the sort of conceptual trap competitive exams use.
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function toggleAnswer(card) {
+        card.classList.toggle('active');
+    }
+
+    let allVisible = false;
+    function toggleAll() {
+        const cards = document.querySelectorAll('.mcq-card');
+        const btn = document.getElementById('toggle-all-btn');
+        allVisible = !allVisible;
+        
+        cards.forEach(card => {
+            if (allVisible) {
+                card.classList.add('active');
+            } else {
+                card.classList.remove('active');
+            }
+        });
+
+        btn.textContent = allVisible ? "Hide All Answers" : "Show All Answers";
+    }
+</script>
+
+</body>
+</html>
