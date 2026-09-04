@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sanskrit - Pratibha Education</title>
+
+<style>
+  body{
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+    background:#f7f4ea;
+    color:#0a1931;
+  }
+
+  header{
+    background:linear-gradient(90deg,#0a1931 0%,#123456 50%,#1a4a7a 100%);
+    color:#f5d48a;
+    padding:14px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:sticky;
+    top:0;
+    z-index:10;
+    box-shadow:0 2px 10px rgba(0,0,0,0.2);
+    border-bottom:2px solid #f5d48a;
+  }
+
+  .logo-text{text-align:center}
+
+  .logo-text h1{
+    font-family:'Times New Roman',serif;
+    font-style:italic;
+    font-weight:700;
+    font-size:20px;
+    margin:0;
+    letter-spacing:2px;
+    color:#f5d48a;
+  }
+
+  .logo-text small{
+    display:block;
+    font-size:12px;
+    letter-spacing:3px;
+    margin-top:2px;
+    color:#fff;
+  }
+
+  .nav{
+    display:flex;
+    gap:10px;
+    margin:15px 20px;
+    flex-wrap:wrap;
+  }
+
+  .back{
+    color:#0a1931;
+    text-decoration:none;
+    font-weight:bold;
+    background:white;
+    padding:8px 15px;
+    border-radius:20px;
+    border:1px solid #e7d9a8;
+  }
+
+  .back:hover{
+    background:#fffaf0;
+    border-color:#f5d48a;
+  }
+
+  .container{
+    max-width:900px;
+    margin:0 auto;
+    padding:10px 20px 40px;
+  }
+
+  .subject-head{
+    background:white;
+    border-radius:18px;
+    padding:20px;
+    border:1px solid #f0e6c8;
+    text-align:center;
+    margin-bottom:20px;
+  }
+
+  .subject-head .icon{
+    font-size:40px;
+    width:70px;
+    height:70px;
+    background:#0a1931;
+    color:#f5d48a;
+    border-radius:15px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 10px;
+  }
+
+  .subject-head h2{
+    margin:5px 0;
+    font-size:26px;
+  }
+
+  .subject-head p{
+    color:#6b5d3e;
+    margin:0;
+  }
+
+  .chapter-list{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+
+  .chapter{
+    background:white;
+    border-radius:14px;
+    padding:16px 18px;
+    border:1px solid #f0e6c8;
+    text-decoration:none;
+    color:#0a1931;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    transition:0.3s;
+  }
+
+  .chapter:hover{
+    transform:translateX(5px);
+    border-color:#f5d48a;
+    box-shadow:0 4px 15px rgba(0,0,0,0.07);
+  }
+
+  .chapter b{
+    font-size:16px;
+  }
+
+  .chapter span{
+    font-size:12px;
+    background:#f7f4ea;
+    padding:5px 10px;
+    border-radius:20px;
+    color:#6b5d3e;
+  }
+
+  .chapter .arrow{
+    color:#f5d48a;
+    background:#0a1931;
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+  }
+
+  @media(max-width:600px){
+    .container{
+      padding:10px 14px 35px;
+    }
+
+    .nav{
+      margin:12px 14px;
+    }
+
+    .subject-head h2{
+      font-size:22px;
+    }
+
+    .chapter{
+      padding:14px;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo-text">
+    <h1>PRATIBHA EDUCATION</h1>
+    <small>विद्या परमं बलम्</small>
+  </div>
+</header>
+
+<div class="nav">
+  <a href="../basic.html" class="back">← Basic Subjects</a>
+  <a href="../index.html" class="back">🏠 Home</a>
+</div>
+
+<div class="container">
+
+  <div class="subject-head">
+    <div class="icon">🕉️</div>
+    <h2>Sanskrit - संस्कृत भाषा</h2>
+    <p>संस्कृत व्याकरण, शब्द रूप, धातु रूप एवं सम्पूर्ण अध्ययन सामग्री</p>
+  </div>
+
+  <div class="chapter-list">
+
+    <a href="varnamala.html" class="chapter">
+      <div>
+        <b>1. संस्कृत वर्णमाला</b><br>
+        <span>स्वर, व्यंजन एवं वर्ण परिचय</span>
+      </div>
+      <div class="arrow">→</div>
+    </a>
+
+    <a href="#" class="chapter">
+      <div>
+        <b>2. संज्ञा, सर्वनाम एवं विशेषण</b><br>
+        <span>शब्द भेद एवं उनके प्रयोग</span>
+      </div>
+      <div class="arrow">→</div>
+    </a>
+
+    <a href="#" class="chapter">
+      <div>
+        <b>3. लिंग, वचन एवं पुरुष</b><br>
+        <span>पुल्लिंग, स्त्रीलिंग, नपुंसकलिंग</span>
+      </div>
+      <div class="arrow">→</div>
+    </a>
+
+    <a href="#" class="chapter">
+      <div>
+        <b>4. कारक एवं विभक्ति</b><br>
+        <span>प्रथमा से सप्तमी तक</span>
+      </div>
+      <div class="arrow">→</div>
+    </a>
+
+    <a href="#" class="chapter">
+      <div>
+        <b>5. शब्द रूप</b><br>
+        <span>राम, बालक, लता, फल, नदी आदि</span>
+      </div>
+      <div class="arrow">→</div>
+    </a>
+
+    <a href="#" class="chapter">
+      <div>
+        <b>6. धातु रूप</b><br>
+        <span>पठ्, गम्, भू, लिख् आदि धातु</span>
+      </div>
+      <div class="arrow">→</div>
+    </a>
+
+    <a href="#" class="chapter">
+      <div>
+        <b>7. लकार</b><br>
+        <span>लट्, लङ्, लृट्, लोट् एवं विधिलिङ्</span>
+      </div>
+      <div class="arrow">→</div>
+    </a>
+
+    <a href="#" class="chapter">
+      <div>
+        <b>8. संधि</b><br>
+        <span>स्वर, व्यंजन एवं विसर्ग संधि</span>
+      </div>
+      <div class="arrow">→</div>
+    </a>
+
+    <a href="#" class="chapter">
+      <div>
+        <b>9. समास</b><br>
+        <span>अव्ययीभाव, तत्पुरुष, द्वंद्व, बहुव्रीहि</span>
+      </div>
+      <div class="arrow">→</div>
+    </a>
+
+    <a href="#" class="chapter">
+      <div>
+        <b>10. उपसर्ग एवं प्रत्यय</b><br>
+        <span>शब्द निर्माण एवं प्रयोग</span>
+      </div>
+      <div class="arrow">→</div>
+    </a>
+
+    <a href="#" class="chapter">
+      <div>
+        <b>11. संस्कृत संख्या ज्ञान</b><br>
+        <span>1 से 100 तक संख्याएँ</span>
+      </div>
+      <div class="arrow">→</div>
+    </a>
+
+    <a href="#" class="chapter">
+      <div>
+        <b>12. हिंदी से संस्कृत अनुवाद</b><br>
+        <span>सरल वाक्य एवं अभ्यास</span>
+      </div>
+      <div class="arrow">→</div>
+    </a>
+
+    <a href="#" class="chapter">
+      <div>
+        <b>13. संस्कृत गद्य एवं पद्य</b><br>
+        <span>पाठ, श्लोक एवं प्रश्नोत्तर</span>
+      </div>
+      <div class="arrow">→</div>
+    </a>
+
+    <a href="#" class="chapter">
+      <div>
+        <b>14. संस्कृत शब्दावली</b><br>
+        <span>फल, फूल, पशु, पक्षी, शरीर एवं प्रकृति</span>
+      </div>
+      <div class="arrow">→</div>
+    </a>
+
+    <a href="#" class="chapter">
+      <div>
+        <b>15. संस्कृत शिक्षण विधियाँ</b><br>
+        <span>संस्कृत Pedagogy एवं शिक्षण कौशल</span>
+      </div>
+      <div class="arrow">→</div>
+    </a>
+
+    <a href="#" class="chapter">
+      <div>
+        <b>16. अभ्यास प्रश्न एवं MCQ</b><br>
+        <span>परीक्षा उपयोगी महत्वपूर्ण प्रश्न</span>
+      </div>
+      <div class="arrow">→</div>
+    </a>
+
+  </div>
+
+</div>
+
+</body>
+</html>
