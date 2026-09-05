@@ -171,7 +171,8 @@ import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10
   };
 
   const app = initializeApp(firebaseConfig);
-  const auth = getAuth(app);
+const auth = getAuth(app);
+const db = getFirestore(app);
 
   // Auto Check Login Status
   onAuthStateChanged(auth, (user) => {
