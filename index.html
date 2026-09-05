@@ -237,10 +237,7 @@ const db = getFirestore(app);
     }
     try {
       await signInWithEmailAndPassword(auth, email, pass);
-      const next = new URLSearchParams(window.location.search).get('next');
-
-if (next) {
-    window.location.href = next;
+      
     } catch (err) {
       errorBox.innerText = 'Access denied: गलत यूजरनेम अथवा पासवर्ड';
     }
