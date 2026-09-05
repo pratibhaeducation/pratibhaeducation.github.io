@@ -181,12 +181,12 @@ const db = getFirestore(app);
         const next = urlParams.get('next');
 
         if (next) {
-            // URL se ?next= hata dein taaki session lock na ho
-            window.history.replaceState({}, document.title, window.location.pathname);
+            // Login successful hone ke baad user ko next page par bhejen
             window.location.href = next;
             return;
         }
 
+        // Agar next URL nahi hai toh protected content dikhayein
         if (document.getElementById('login-box')) {
             document.getElementById('login-box').style.display = 'none';
         }
@@ -194,7 +194,7 @@ const db = getFirestore(app);
             document.getElementById('protected-content').style.display = 'block';
         }
     } else {
-        // Agar user login nahi hai toh normal basic.html par jaane dein
+        // Bina login wale users ke liye normal view
         if (document.getElementById('login-box')) {
             document.getElementById('login-box').style.display = 'block';
         }
