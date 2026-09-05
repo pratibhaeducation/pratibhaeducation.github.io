@@ -176,16 +176,20 @@ const db = getFirestore(app);
 
   // Auto Check Login Status
   onAuthStateChanged(auth, async (user) => {
-  if (user) {
-    const next = new URLSearchParams(window.location.search).get('next');
+  onAuthStateChanged(auth, async (user) => {
 
-if (next && /^[a-zA-Z0-9_-]+\.html$/.test(next)) {
-    window.location.replace(next);
-    return;
-}
-    document.getElementById('login-box').style.display = 'none';
-    document.getElementById('protected-content').style.display = 'block';
+    if (user) {
 
+        document.getElementById('login-box').style.display = 'none';
+        document.getElementById('protected-content').style.display = 'block';
+
+        // Login के बाद अगर next है तो वहीं भेजें
+        const next = new URLSearchParams(window.location.search).get('next');
+
+        if (next) {
+            window.location.href = next;
+            return;
+        }
     // Firestore protected content
     try {
       const docRef = doc(db, "protectedContent", "test");
