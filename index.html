@@ -176,7 +176,6 @@ const db = getFirestore(app);
 
   // Auto Check Login Status
   onAuthStateChanged(auth, async (user) => {
-  onAuthStateChanged(auth, async (user) => {
 
     if (user) {
 
@@ -190,6 +189,7 @@ const db = getFirestore(app);
             window.location.href = next;
             return;
         }
+        
     // Firestore protected content
     try {
       const docRef = doc(db, "protectedContent", "test");
