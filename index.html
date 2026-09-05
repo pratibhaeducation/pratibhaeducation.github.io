@@ -158,7 +158,7 @@ footer strong{color:var(--gold)}
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
   import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
-
+import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
   // Firebase Console → Project settings → Your apps → Web app se ye values paste karein.
   // IMPORTANT: Yahan Firebase Web config rakhna normal hai; Service Account/private key kabhi paste na karein.
   const firebaseConfig = {
