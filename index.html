@@ -176,19 +176,33 @@ const db = getFirestore(app);
 
   // Auto Check Login Status
   onAuthStateChanged(auth, async (user) => {
-
     if (user) {
-
-        document.getElementById('login-box').style.display = 'none';
-        document.getElementById('protected-content').style.display = 'block';
-
-        // Login के बाद अगर next है तो वहीं भेजें
-        const next = new URLSearchParams(window.location.search).get('next');
+        const urlParams = new URLSearchParams(window.location.search);
+        const next = urlParams.get('next');
 
         if (next) {
+            // URL se ?next= hata dein taaki session lock na ho
+            window.history.replaceState({}, document.title, window.location.pathname);
             window.location.href = next;
             return;
         }
+
+        if (document.getElementById('login-box')) {
+            document.getElementById('login-box').style.display = 'none';
+        }
+        if (document.getElementById('protected-content')) {
+            document.getElementById('protected-content').style.display = 'block';
+        }
+    } else {
+        // Agar user login nahi hai toh normal basic.html par jaane dein
+        if (document.getElementById('login-box')) {
+            document.getElementById('login-box').style.display = 'block';
+        }
+        if (document.getElementById('protected-content')) {
+            document.getElementById('protected-content').style.display = 'none';
+        }
+    }
+});
         
     // Firestore protected content
     try {
