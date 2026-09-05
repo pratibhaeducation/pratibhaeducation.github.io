@@ -234,7 +234,7 @@ if (next && /^[a-zA-Z0-9_-]+\.html$/.test(next)) {
     try {
       await signInWithEmailAndPassword(auth, email, pass);
     } catch (err) {
-      errorBox.innerText = 'Access Denied: Galat Email ya Password';
+      errorBox.innerText = 'Access denied: गलत यूजरनेम अथवा पासवर्ड';
     }
   };
 
