@@ -175,45 +175,32 @@ const auth = getAuth(app);
 
 
   // Auto Check Login Status
-  onAuthStateChanged(auth, async (user) => {
-  if (user) {
-    document.getElementById('login-box').style.display = 'none';
-    document.getElementById('protected-content').style.display = 'block';
-
-    // Firestore protected content
-    try {
-      const docRef = doc(db, "protectedContent", "test");
-      const docSnap = await getDoc(docRef);
-
-      if (docSnap.exists()) {
-        const data = docSnap.data();
-
-        document.getElementById('protected-content').innerHTML = `
-          <h1>${data.title}</h1>
-          <p>${data.content}</p>
-          <button onclick="logout()">Logout</button>
-        `;
-      } else {
-        document.getElementById('protected-content').innerHTML = `
-          <p>Protected content nahi mila.</p>
-          <button onclick="logout()">Logout</button>
-        `;
-      }
-
-    } catch (error) {
-      console.error("Firestore Error:", error);
-
-      document.getElementById('protected-content').innerHTML = `
-        <p>Content load nahi ho pa raha.</p>
-        <button onclick="logout()">Logout</button>
-      `;
+ onAuthStateChanged(auth, (user) => {
+    if (user) {
+      document.getElementById('login-box').style.display = 'none';
+      document.getElementById('protected-content').style.display = 'block';
+    } else {
+      document.getElementById('login-box').style.display = 'block';
+      document.getElementById('protected-content').style.display = 'none';
     }
+  });
 
-  } else {
-    document.getElementById('login-box').style.display = 'block';
-    document.getElementById('protected-content').style.display = 'none';
-  }
-});
+  // Login Function
+  window.login = async () => {
+    const email = document.getElementById('email').value.trim();
+    const pass = document.getElementById('password').value;
+    const errorBox = document.getElementById('error');
+    errorBox.innerText = '';
+    if (!email || !pass) {
+      errorBox.innerText = 'Email aur Password dono bhariye.';
+      return;
+    }
+    try {
+      await signInWithEmailAndPassword(auth, email, pass);
+    } catch (err) {
+      errorBox.innerText = 'Access Denied: Galat Email ya Password';
+    }
+  };
 
   // Login Function
   window.login = async () => {
