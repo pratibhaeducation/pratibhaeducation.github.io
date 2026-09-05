@@ -176,9 +176,19 @@ const db = getFirestore(app);
 
   // Auto Check Login Status
   onAuthStateChanged(auth, async (user) => {
-  if (user) {
-    document.getElementById('login-box').style.display = 'none';
-    document.getElementById('protected-content').style.display = 'block';
+    if (user) {
+
+        const next = new URLSearchParams(window.location.search).get('next');
+
+        if (next && /^[a-zA-Z0-9_-]+\.html$/.test(next)) {
+            window.location.replace(next);
+            return;
+        }
+
+        document.getElementById('login-box').style.display = 'none';
+        document.getElementById('protected-content').style.display = 'block';
+
+        // बाकी आपका पुराना code यहीं रहेगा
     // Firestore protected content
     try {
       const docRef = doc(db, "protectedContent", "test");
