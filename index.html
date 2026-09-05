@@ -232,7 +232,7 @@ const db = getFirestore(app);
     const errorBox = document.getElementById('error');
     errorBox.innerText = '';
     if (!email || !pass) {
-      errorBox.innerText = 'Email aur Password dono bhariye.';
+      errorBox.innerText = 'ईमेल और पासवर्ड दोनों प्रविष्ट करें';
       return;
     }
     try {
