@@ -176,34 +176,9 @@ const db = getFirestore(app);
 
   // Auto Check Login Status
   onAuthStateChanged(auth, async (user) => {
-    if (user) {
-        const urlParams = new URLSearchParams(window.location.search);
-        const next = urlParams.get('next');
-
-        if (next) {
-            // Login successful hone ke baad user ko next page par bhejen
-            window.location.href = next;
-            return;
-        }
-
-        // Agar next URL nahi hai toh protected content dikhayein
-        if (document.getElementById('login-box')) {
-            document.getElementById('login-box').style.display = 'none';
-        }
-        if (document.getElementById('protected-content')) {
-            document.getElementById('protected-content').style.display = 'block';
-        }
-    } else {
-        // Bina login wale users ke liye normal view
-        if (document.getElementById('login-box')) {
-            document.getElementById('login-box').style.display = 'block';
-        }
-        if (document.getElementById('protected-content')) {
-            document.getElementById('protected-content').style.display = 'none';
-        }
-    }
-});
-        
+  if (user) {
+    document.getElementById('login-box').style.display = 'none';
+    document.getElementById('protected-content').style.display = 'block';
     // Firestore protected content
     try {
       const docRef = doc(db, "protectedContent", "test");
